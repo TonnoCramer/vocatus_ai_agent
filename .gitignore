@@ -1,9 +1,25 @@
+# Virtual environment
 .venv/
+
+# Python
 __pycache__/
+*.pyc
+
+# Environment / secrets
 .env
+.env.*
 
 # Django
 db.sqlite3
 *.log
 
-runserver notes.docx
+# Local / personal files
+runserver
+notes.docx
+
+# RAG sources (PDFs) and generated vector store
+rag_source/
+rag_store/
+*.faiss
+
+

@@ -28,6 +28,14 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+
+
+
+
+
+
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bierguru',
 ]
 
 MIDDLEWARE = [
@@ -80,6 +89,7 @@ DATABASES = {
 }
 
 
+
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
 
@@ -115,3 +125,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+RAG_DIR = Path(BASE_DIR).parent / "rag_store"
+FAISS_INDEX_PATH = RAG_DIR / "index.faiss"
+FAISS_CHUNKS_PATH = RAG_DIR / "chunks.json"

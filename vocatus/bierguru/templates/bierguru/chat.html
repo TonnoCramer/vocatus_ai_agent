@@ -1,0 +1,29 @@
+{% load static %}
+
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vocatus AI Chat</title>
+    <link rel="stylesheet" href="{% static 'bierguru/css/chat.css' %}" />
+  </head>
+  <body>
+    {% csrf_token %}
+    <h1>Vocatus AI</h1>
+
+    <div class="card">
+      <div id="chat"></div>
+
+      <div class="row">
+        <input
+          id="msg"
+          type="text"
+          placeholder="Bijv. Welke IPA past bij een Black IPA liefhebber?"
+        />
+        <button id="send" type="button">Verzenden</button>
+      </div>
+    </div>
+    <script src="{% static 'bierguru/js/chat.js' %}"></script>
+  </body>
+</html>
