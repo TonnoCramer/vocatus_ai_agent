@@ -26,131 +26,17 @@
   font-display: swap;
 }
 
-/* =========================
-   BASE STYLES
-   ========================= */
-
-body,
-input,
-button {
-  font-family:
-    "IBM Plex Sans",
-    system-ui,
-    -apple-system,
-    sans-serif;
+/* Kleine UX helpers */
+html, body {
+  height: 100%;
 }
 
-.card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 16px;
-  max-width: 1100px;
-  width: min(1100px, 96vw);
-  margin: 12px auto;
-}
-
+/* Zachte scroll op iOS */
 #chat {
-  min-height: 520px;
-  height: 60vh;
-  overflow-y: auto;
-  padding: 12px;
-  background: #ffe8d6;
-  border-radius: 8px;
+  -webkit-overflow-scrolling: touch;
 }
 
-.row {
-  display: flex;
-  gap: 8px;
-  margin-top: 12px;
-  padding-top: 12px;
-  border-top: 1px solid #CC5500;
+/* Voorkom iOS zoom-issues (>=16px) */
+textarea {
+  font-size: 16px;
 }
-
-input[type="text"] {
-  flex: 1;
-  min-width: 0;
-  padding: 10px;
-  background: #ffe8d6;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-  height: 44px;
-  box-sizing: border-box;
-}
-
-button {
-  height: 44px;
-  padding: 0 16px;
-
-  background: #CC5500;
-  border: none;
-  color: #ffffff;
-
-  border-radius: 8px;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-h1 {
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 16px;
-}
-
-h2 {
-  font-weight: 500;
-}
-
-.app-header {
-  background: #CC5500;
-  padding: 12px;
-  margin-bottom: 16px;
-  width: min(1100px, 96vw);
-  border-radius: 8px;
-  box-sizing: border-box;
-  margin: 0 auto;
-}
-
-
-.app-header h1 {
-  margin: 0;
-  text-align: center;
-  font-weight: 600;
-}
-
-@media (max-width: 768px) {
-  .row {
-    flex-direction: column;
-  }
-
-  .card {
-    padding: 8;
-    box-sizing: border-box;
-  }
-
-  input[type="text"],
-  button {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  
-}
-
-
-@media (max-width: 480px) {
-  button {
-    font-size: 1.1rem;
-    color: #ffffff;
-  }
-}
-
-
-@media (max-width: 480px) {
-  #chat {
-    max-height: 50vh;
-    overflow-y: auto;
-  }
-}
-
